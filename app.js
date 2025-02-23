@@ -28,13 +28,13 @@ const response=fetch(location)
     const  wind=document.getElementById('wind')
     wind.innerText=data.wind.speed
     // the two lines are to be explained
-    let timestamp = 1740229772;
+    let timestamp = data.sys.sunrise;
     let date = new Date(timestamp * 1000);
     //
     const sunset=document.getElementById('sunset')
     sunset.innerText=date.toUTCString();
     // the two lines are to be explained
-    let timestamp1 = 1740187510;
+    let timestamp1 = data.sys.sunset;
     let date1 = new Date(timestamp1 * 1000);
     //
     const sunrise=document.getElementById('sunrise')
@@ -60,14 +60,14 @@ const response=fetch(location)
     const wind1 = document.getElementById('wind1')
     wind1.innerText = data.wind.speed
     // the two lines are to be explained
-    let timestamp2 = 1740229772;
+    let timestamp2 = data.sys.sunrise;
     let date2 = new Date(timestamp1 * 1000);
     //
     //
     const sunset1 = document.getElementById('sunset1')
     sunset1.innerText = date1.toUTCString();
     // the two lines are to be explained
-    let timestamp3 = 1740187510;
+    let timestamp3 = data.sys.sunset;
     let date3 = new Date(timestamp2 * 1000);
     //
     //
