@@ -19,14 +19,28 @@ const response=fetch(location)
     lat.innerText=data.coord.lat
     const temp=document.getElementById('temp')
     temp.innerText=Math.floor((data.main.temp)-275)+"°C"
+    console.log(typeof(temp))
     const  feels_like=document.getElementById('feels_like')
-    feels_like.innerText=Math.floor((data.main. feels_like)-273)+"°C"
+    feels_like.innerText=Math.floor((data.main. feels_like)-275)+"°C"
     const  temp_min=document.getElementById('temp_min')
-    temp_min.innerText=Math.floor((data.main. temp_min)-273)+"°C"
+    temp_min.innerText=Math.floor((data.main. temp_min)-275)+"°C"
     const  temp_max=document.getElementById('temp_max')
-    temp_max.innerText=Math.floor((data.main. temp_max)-273)+"°C"
+    temp_max.innerText=Math.floor((data.main. temp_max)-275)+"°C"
     const  wind=document.getElementById('wind')
     wind.innerText=data.wind.speed
+    const place=document.getElementById('place')
+    if(temp>30){
+        place.innerText="☀️"
+    }
+    else if(temp<=20){
+        place.innerText="🌤️"
+    }
+    else if(temp<=10){
+        place.innerText="⛅"
+    }
+    else{
+        place.innerText="❄️"
+    }
     // the two lines are to be explained
     let timestamp = data.sys.sunrise;
     let date = new Date(timestamp * 1000);
@@ -52,11 +66,11 @@ const response=fetch(location)
     const temp1 = document.getElementById('temp')
     temp1.innerText = Math.floor((data.main.temp) - 275) + "°C"
     const feels_like1 = document.getElementById('feels_like1')
-    feels_like1.innerText = Math.floor((data.main.feels_like) - 273) + "°C"
+    feels_like1.innerText = Math.floor((data.main.feels_like) - 275) + "°C"
     const temp_min1 = document.getElementById('temp_min1')
-    temp_min1.innerText = Math.floor((data.main.temp_min) - 273) + "°C"
+    temp_min1.innerText = Math.floor((data.main.temp_min) - 275) + "°C"
     const temp_max1 = document.getElementById('temp_max1')
-    temp_max1.innerText = Math.floor((data.main.temp_max) - 273) + "°C"
+    temp_max1.innerText = Math.floor((data.main.temp_max) - 275) + "°C"
     const wind1 = document.getElementById('wind1')
     wind1.innerText = data.wind.speed
     // the two lines are to be explained

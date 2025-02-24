@@ -48,7 +48,7 @@ body>div{
 .third{
     display: flex;
     margin-top: 50px;
-    margin-left: -100px;
+    margin-left: 0px;
     justify-content: space-evenly;
 }
 .col-4>h2 {
@@ -64,7 +64,7 @@ body>div{
 
 }
 .row{
-   margin: 10px 140px 10px 170px;
+   margin: 50px 140px 10px 170px;
 }
 .col-4>h3 {
     width: 150px;
@@ -107,6 +107,9 @@ body>div{
     margin:20px;
     border: 3px solid black;
 
+}
+#place{
+    font-size: 80px;
 }
 @media(max-width:576px){
     #input{
